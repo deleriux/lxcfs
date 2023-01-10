@@ -1032,6 +1032,7 @@ static void *lxcfs_init(struct fuse_conn_info *conn)
 
 #if HAVE_FUSE3
 	cfg->direct_io = 1;
+	cfg->nullpath_ok = 0;
 #endif
 
 	return fuse_get_context()->private_data;
